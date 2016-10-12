@@ -5,15 +5,15 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/', function (req, res) {
+app.get('/', function (req, res) {  //Whenever a get is made to '/' thsi function is executed
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/ui/style.css', function (req, res) {
+app.get('/ui/style.css', function (req, res) {  //when a get request is made to '/ui/style.css' this function is executed  
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
+app.get('/ui/madi.png', function (req, res) {    //"        "       "        " '/ui/madi.png'       "           "
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
