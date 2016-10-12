@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var count = 1;
+var $count = 1;
 app.get('/', function (req, res) {  //Whenever a get is made to '/' thsi function is executed
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
