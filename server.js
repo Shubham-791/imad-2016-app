@@ -73,7 +73,7 @@ app.get('/', function (req, res) {  //Whenever a get is made to '/' thsi functio
 
 
 app.get("/article-one",function (req,res){
-   res.send(createTemplate(artilceOne));  
+   res.send(createTemplate(articleOne));  
 });
 
 app.get("/article-two",function (req,res){
