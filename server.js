@@ -113,6 +113,9 @@ app.get("/article-three",function (req,res){
 app.get('/ui/style.css', function (req, res) {  //when a get request is made to '/ui/style.css' this function is executed  
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
+app.get('/ui/main.js', function (req, res) {  //when a get request is made to '/ui/style.css' this function is executed  
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
 
 app.get('/ui/madi.png', function (req, res) {    //"        "       "        " '/ui/madi.png'       "           "
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
