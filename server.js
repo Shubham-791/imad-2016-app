@@ -33,7 +33,7 @@ var articles={
              This is the content for my Fist Article.This is the content for my Fist Article.
              </p>`
 },
-    'artilce-two':{
+    'article-two':{
         title: 'Article Two | Shubham Verma',
         heading: 'Article Two',
         date: 'Oct 19 2016',
@@ -43,12 +43,12 @@ var articles={
              </p> `
     },
     'article-three':{
-        title: 'Article Two | Shubham Verma',
-        heading: 'Article Two',
+        title: 'Article Three | Shubham Verma',
+        heading: 'Article Three',
         date: 'Oct 21 2016',
         content: `
              <p>
-             This is the content for my Second Article.
+             This is the content for my Third Article.
              </p> `
         
     }
