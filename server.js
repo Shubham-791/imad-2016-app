@@ -65,8 +65,9 @@ var htmltemplate = `
 </html>
 
 `;
-return htmlTemplate;
+return htmltemplate;
 }
+
 app.get('/', function (req, res) {  //Whenever a get is made to '/' thsi function is executed
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
