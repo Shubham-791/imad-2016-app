@@ -6,43 +6,52 @@ var app = express();
 app.use(morgan('combined')); 
 
 
-var articles{
-articleOne:{
-    title: 'Article One | Shubham Verma',
-    heading: 'Article One',
-    date: 'Oct 13, 2016',
-    content: `
-         <p>
-         This is the content for my Fist Article.
-         This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-         This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-         </p>
-         <p>
-         This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-         This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-         This is the content for my Fist Article.This is the content for my Fist Article.
-         </p>
-         <p>
-         This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-         This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-         This is the content for my Fist Article.This is the content for my Fist Article.
-         </p>
-         <p>
-         This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-         This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-         This is the content for my Fist Article.This is the content for my Fist Article.
-         </p>`
+var articles={
+    'article-one':{
+        title: 'Article One | Shubham Verma',
+        heading: 'Article One',
+        date: 'Oct 13, 2016',
+        content: `
+             <p>
+             This is the content for my Fist Article.
+             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
+             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
+             </p>
+             <p>
+             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
+             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
+             This is the content for my Fist Article.This is the content for my Fist Article.
+             </p>
+             <p>
+             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
+             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
+             This is the content for my Fist Article.This is the content for my Fist Article.
+             </p>
+             <p>
+             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
+             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
+             This is the content for my Fist Article.This is the content for my Fist Article.
+             </p>`
 },
-artilceTwo:{
-    title: 'Article Two | Shubham Verma',
-    heading: 'Article Two',
-    date: 'Oct 19 2016',
-    content: `
-         <p>
-         This is the content for my Second Article.
-         </p> `
+    'artilce-two':{
+        title: 'Article Two | Shubham Verma',
+        heading: 'Article Two',
+        date: 'Oct 19 2016',
+        content: `
+             <p>
+             This is the content for my Second Article.
+             </p> `
     },
-articleThree:{}
+    'article-three':{
+        title: 'Article Two | Shubham Verma',
+        heading: 'Article Two',
+        date: 'Oct 21 2016',
+        content: `
+             <p>
+             This is the content for my Second Article.
+             </p> `
+        
+    }
 };
 
 function createTemplate(data){
@@ -86,18 +95,21 @@ app.get('/', function (req, res) {  //Whenever a get is made to '/' thsi functio
 });
 
 
-app.get("/article-one",function (req,res){
-   res.send(createTemplate(articleOne));  
+app.get("/:articleName",function (req,res){         //Expressway framework will convert :articleName into variable name 
+    //articleName == article-One
+    // articles == {} content object for article one
+   var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName]));  
 });
 
-app.get("/article-two",function (req,res){
+/*app.get("/article-two",function (req,res){
    res.sendFile(path.join(__dirname,"ui","article-two.html"));
 });
 
 app.get("/article-three",function (req,res){
    res.sendFile(path.join(__dirname,"ui","article-three.html"));
 });
-
+*/
 app.get('/ui/style.css', function (req, res) {  //when a get request is made to '/ui/style.css' this function is executed  
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
