@@ -19,7 +19,7 @@ button.onclick = function(){
         //Not done yet
     };
     
-    // Make the Request
+    // Make the Request 
     request.open('GET','http://shubham-791.imad.hasura-app.io/counter',true);
     request.send(null);
 };
