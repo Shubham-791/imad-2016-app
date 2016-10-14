@@ -10,9 +10,17 @@ button.onclick = function(){
         if(request.readyState === XMLHttpRequest.DONE){ // Request has been completed successfully
             //Take some action
             if(request.status === 200){
-                var counter = request.responseText;  
+                /*var counter = request.responseText;  
                 var span = document.getElementById('count');
-                span.innerHTML = counter.toString(); 
+                span.innerHTML = counter.toString(); */
+                var names = ['name1','name2','name3','name4'];
+                var list = '';
+                for(var i=0;i<names.length;i++){
+                list += '<li>'+names[i]+'</li>';
+                }
+                var ul = document.getElementById('namelist');
+                ul.innerHTML = list; 
+
             }
                 
         }
@@ -30,16 +38,34 @@ var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //Should make a request to server and send a name
     
+    // Make a request to counter endpoint
+    var request = new XMLHttpRequest();
+    
+    //Capture the request object 
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){ // Request has been completed successfully
+            //Take some action
+            if(request.status === 200){
+            var names = ['name1','name2','name3','name4'];
+            var list = '';
+            for(var i=0;i<names.length;i++){
+            list += '<li>'+names[i]+'</li>';
+            }
+            var ul = document.getElementById('namelist');
+            ul.innerHTML = list; 
+            
+            }
+                
+        }
+        //Not done yet
+    };
+    
+    // Make the Request 
+    request.open('GET','http://shubham-791.imad.hasura-app.io/submit-name?name='+name,true);
+    request.send(null);
     
     
     //Capture a list of names and render it as list
-var names = ['name1','name2','name3','name4'];
-var list = '';
-    for(var i=0;i<names.length;i++){
-    list += '<li>'+names[i]+'</li>';
-    }
-    var ul = document.getElementById('namelist');
-    ul.innerHTML = list; 
 };
 
 
