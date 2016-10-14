@@ -126,9 +126,9 @@ app.get('/ui/madi.png', function (req, res) {    //"        "       "        " '
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 var names = [];
-app.get('/submit-name/:name',function(req,res){
+app.get('/submit-name/',function(req,res){          // URL : submit-name?name=XXXXXX
    //Get the name from the request object
-   var name = req.params.name;      // JASON java script object notation
+   var name = req.query.name;      // JASON java script object notation
    names.push(name);
    res.send(JSON.stringify(names));  
 }); 
