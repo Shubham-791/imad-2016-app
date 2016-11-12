@@ -82,6 +82,12 @@ var htmltemplate = `
          <div>
          ${content} 
          </div>
+         <hr/>
+         <form action = "http://shubham-791.imad.hasura-app.io/comm_submit" method = "GET">
+         <textarea rows = "3" cols = "60" name = "comment" id = "com" placeholder = "Enter your commments regarding this article">
+         
+         </textarea>
+         </form>
      </div>
 </body>
 </html>
@@ -107,6 +113,11 @@ app.get('/submit-name',function (req,res){          // URL : submit-name?name=XX
    names.push(name);
    res.send(JSON.stringify(names));  
 }); 
+
+app.get('/comm_submit',function (req,res){
+  var comm_data = document.getElementById("com").value;
+  alert(comm_data);
+});
 
 app.get('/ui/style.css', function (req, res) {  //when a get request is made to '/ui/style.css' this function is executed  
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
