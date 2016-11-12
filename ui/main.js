@@ -63,7 +63,7 @@ submit.onclick = function(){
     // Make the Request 
     var nameInput = document.getElementById('name');
     var temp = nameInput.value;
-    request.open('GET','http://shubham-791.imad.hasura-app.io/submit-name?name='+name,true);
+    request.open('GET','http://shubham-791.imad.hasura-app.io/submit-name?name='+temp,true);
     request.send(null);
     
     
