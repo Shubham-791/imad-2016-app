@@ -85,6 +85,8 @@ var htmltemplate = `
      </div>
 </body>
 </html>
+
+`;
 return htmltemplate;
 }
 
