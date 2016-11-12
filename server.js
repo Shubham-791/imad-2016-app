@@ -120,8 +120,7 @@ app.get('/ui/madi.png', function (req, res) {    //"        "       "        " '
 });
 
 app.get("/:articleName",function (req,res){         //Expressway framework will convert :articleName into variable name 
-    //articleName == article-One
-    // articles == {} content object for article one
+    
    var articleName = req.params.articleName;
    res.send(createTemplate(articles[articleName]));  
 });
@@ -130,3 +129,4 @@ var port = 8080; // Use 8080 for local development because you might already hav
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+    
