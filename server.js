@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var comm_data = "" ;
 var app = express();
 app.use(morgan('combined')); 
 
@@ -59,7 +59,7 @@ var title = data.title;
 var date = data.date;
 var heading = data.heading;
 var content = data.content;
-var comm_data = "" ;
+
 var htmltemplate = `
 <html>
 <head>
