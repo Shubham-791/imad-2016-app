@@ -117,8 +117,8 @@ app.get('/submit-name',function (req,res){          // URL : submit-name?name=XX
    res.send(JSON.stringify(names));  
 }); 
 
-app.get('/comm_submit:data',function (req,res){
-  var comm_data = data;
+app.get('/comm_submit',function (req,res){
+  var comm_data = req.query.comment;
   alert(comm_data);
 });
 
