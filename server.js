@@ -121,7 +121,7 @@ app.get('/submit-name',function (req,res){          // URL : submit-name?name=XX
 }); 
 
 app.get('/comm_submit',function (req,res){
-  comm_data = comm_data + "\n" +req.query.comment;
+  comm_data = comm_data + "<br>" +req.query.comment;
   res.send(comm_data);
 });
 
