@@ -108,13 +108,6 @@ app.get('/submit-name',function (req,res){          // URL : submit-name?name=XX
    res.send(JSON.stringify(names));  
 }); 
 
-app.get("/:articleName",function (req,res){         //Expressway framework will convert :articleName into variable name 
-    //articleName == article-One
-    // articles == {} content object for article one
-   var articleName = req.params.articleName;
-   res.send(createTemplate(articles[articleName]));  
-});
-
 app.get('/ui/style.css', function (req, res) {  //when a get request is made to '/ui/style.css' this function is executed  
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -124,6 +117,13 @@ app.get('/ui/main.js', function (req, res) {  //when a get request is made to '/
 
 app.get('/ui/madi.png', function (req, res) {    //"        "       "        " '/ui/madi.png'       "           "
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+
+app.get("/:articleName",function (req,res){         //Expressway framework will convert :articleName into variable name 
+    //articleName == article-One
+    // articles == {} content object for article one
+   var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName]));  
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
