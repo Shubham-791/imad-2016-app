@@ -119,7 +119,7 @@ app.get('/submit-name',function (req,res){          // URL : submit-name?name=XX
 
 app.get('/comm_submit',function (req,res){
   var comm_data = req.query.comment;
-  res.send(alert(comm_data));
+  res.send(comm_data);
 });
 
 app.get('/ui/style.css', function (req, res) {  //when a get request is made to '/ui/style.css' this function is executed  
