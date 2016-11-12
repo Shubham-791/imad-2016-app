@@ -32,8 +32,7 @@ button.onclick = function(){
     request.send(null);
 };
 //Submit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //Should make a request to server and send a name
@@ -62,6 +61,8 @@ submit.onclick = function(){
     };
     
     // Make the Request 
+    var nameInput = document.getElementById('name');
+    var temp = nameInput.value;
     request.open('GET','http://shubham-791.imad.hasura-app.io/submit-name?name='+name,true);
     request.send(null);
     
