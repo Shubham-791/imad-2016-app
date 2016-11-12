@@ -83,7 +83,7 @@ var htmltemplate = `
          ${content} 
          </div>
          <hr/>
-         <form action = "http://shubham-791.imad.hasura-app.io/comm_submit" method = "GET">
+         <form action = "http://shubham-791.imad.hasura-app.io/comm_submit" method = "POST">
          <br>
          <h3>Comments:</h3>
          <textarea rows = "3" cols = "60" name = "comment" id = "com" placeholder = "Enter your commments regarding this article">
