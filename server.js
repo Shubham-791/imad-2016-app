@@ -59,7 +59,7 @@ var title = data.title;
 var date = data.date;
 var heading = data.heading;
 var content = data.content;
-
+var comm_data = "" ;
 var htmltemplate = `
 <html>
 <head>
@@ -90,6 +90,9 @@ var htmltemplate = `
          </textarea>
          <br>
          <input type = "submit" value = "Post Comment">
+         <hr/>
+         <h5>Comments By other Users:</h5>
+         ${comm_data}
          </form>
      </div>
 </body>
@@ -118,7 +121,7 @@ app.get('/submit-name',function (req,res){          // URL : submit-name?name=XX
 }); 
 
 app.get('/comm_submit',function (req,res){
-  var comm_data = req.query.comment;
+  comm_data = comm_data + "\n" +req.query.comment;
   res.send(comm_data);
 });
 
