@@ -83,13 +83,13 @@ var htmltemplate = `
          ${content} 
          </div>
          <hr/>
-         <form action = "http://shubham-791.imad.hasura-app.io/comm_submit" method = "POST">
+         <form action = "http://shubham-791.imad.hasura-app.io/comm_submit" method = "GET">
          <br>
          <h3>Comments:</h3>
          <textarea rows = "3" cols = "60" name = "comment" id = "com" placeholder = "Enter your commments regarding this article">
          </textarea>
          <br>
-         <input type = "submit" value = "Post">
+         <input type = "submit" value = "Post Comment">
          </form>
      </div>
 </body>
@@ -117,8 +117,8 @@ app.get('/submit-name',function (req,res){          // URL : submit-name?name=XX
    res.send(JSON.stringify(names));  
 }); 
 
-app.get('/comm_submit',function (req,res){
-  var comm_data = document.getElementById("com").value;
+app.get('/comm_submit:data',function (req,res){
+  var comm_data = data;
   alert(comm_data);
 });
 
