@@ -1,34 +1,94 @@
 <!doctype html>
 <html>
     <head>
-        <link href="/ui/style.css" rel="stylesheet" />
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Fontawesome library -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <link href="/ui/style.css" rel="stylesheet" />
+		
     </head>
-    <body>
-        <div class="container">    
-            <div class="center" >
-                <img id ="madi" src="http://res.cloudinary.com/dyo0qyxat/image/upload/v1480233503/IMG_20160910_170758_HDR_b9pue6.jpg"/>
-            </div>
+    <body style = "background-color : black">
+         <!--Navbar Begins    -->
+  <nav class="navbar navbar-default navbar-fixed-top scrolltop">
+    <div class="container">
+      <!-- navbar header begins   -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+ <span class="sr-only">Toggle Navigation</span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+  </button>
+        <a class="navbar-brand" href="#"><b>Shubham Verma<b></a>
+
+      </div>
+      <!-- navbar header ends -->
+
+      <!-- div collapse begins -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#aboutme">About Me</a></li>
+          <li><a href="/news">Articles</a></li>
+        </ul>
+      </div>
+      <!-- div collapse ends -->
+    </div>
+    <!-- container ends -->
+  </nav>
+  <!--Navbar ends    -->
+  <div class="container-flud">
+<div class="row" id="mainbody">
+<div class="col-md-3 col-sm-3">
+<img class="img-responsive"  src="http://res.cloudinary.com/dyo0qyxat/image/upload/v1480233503/IMG_20160910_170758_HDR_b9pue6.jpg" alt="">
+</div>
+<div class="col-md-6 col-sm-6" id="maincontent">
+  <div id="aboutme">  <h1 style = "color : lightgreen">Welcome To My Website</h1>
+ <p style = "color : white">This is my first Website which has been hosted.I would like to thank IMAD for this wonderful expreience. <br>
+
             <hr/>
-            <h3>Personal</h3>
-            <div>
-                Hi my name is Shubham Verma.
-            </div>
+            <h3 style = "color : orange">Personal</h3>
+            <div style = "color : white">
+                Hi my name is Shubham Verma.I am a self taught developer who has learn HTML,CSS, Bootstrap and JavaScript.I know keep building websites to practice 
+				my web development skills. I also have certified training in Android and have build quite interesting healthcare applications. </div>
             <hr/>
-            <h3>Professional</h3>
-            <div>
-                I study at Shiv Nadar University, Uttar Pradesh.
-            </div>
-            <hr/>
-            <div class = "footer">
-                This button <button id="counter">Click me!</button> has been clicked <span id="count">0</span> times.  
-                <hr/>
-                <input type ="text" id ="name" palceholder ="name"/>
-                <input type ="submit" id = "submit_btn" value ="submit"/>
-                <ui id = "namelist">
-                </ui>
-            </div>
-        </div>    
-        <script type="text/javascript" src="/ui/main.js">
+            <h3 style = "color : orange">Professional</h3>
+            <div style = "color : white">
+                I study at Shiv Nadar University, Uttar Pradesh. I recently built the frontend of a Online Dating Site. Pretty sonn i am going to Develop the Server end too.
+				I also developed a Healthcare application MEM_PILL which reminds users to take their mediciens and contain some usefull features such as SOS Emergency Button, PILL Box , Mailing list of the pills taken to Doctor in PDF format
+            </div>			
+ </p>
+</div><!--aboutme div ends -->
+  </div><!-- main content div ends -->
+<div class="col-md-2 col-sm-2" id="rightcol" style = "color:lightblue">
+    <h4>Please register Below:</h4>
+ Name:<br>  <input type="text" name="username" id="username">
+  Password:<br> <input type="password" name="password" id="password"><br>
+  <button id="login_btn" style = "color : orange">Login</button>
+  <button id="register_btn" style = "color : orange">Register</button>
+ <h3>Skills Learnt</h3>
+ <ul>
+<li>Html</li>
+<li>Css</li>
+<li>Javascript</li>
+<li>Android</li>
+<li>Node</li>
+ </ul>
+</div>  
+     
+	 <script type="text/javascript" src="/ui/main.js">
         </script>
-    </body>
+		
+	</body>
 </html>
