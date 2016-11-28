@@ -12,25 +12,9 @@ var articles={
         heading: 'Article One',
         date: 'Oct 13, 2016',
         content: `
+             <h3>Autonomous Learning for Control and Robotics</h3>
              <p>
-             This is the content for my Fist Article.
-             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-             </p>
-             <p>
-             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-             This is the content for my Fist Article.This is the content for my Fist Article.
-             </p>
-             <p>
-             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-             This is the content for my Fist Article.This is the content for my Fist Article.
-             </p>
-             <p>
-             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-             This is the content for my Fist Article.This is the content for my Fist Article.This is the content for my Fist Article.
-             This is the content for my Fist Article.This is the content for my Fist Article.
+Autonomous learning has been a promising direction in control and robotics for more than a decade since data-driven learning allows to reduce the amount of engineering knowledge, which is otherwise required. How long does it take for an autonomous robot to learn a task from scratch if no informative prior knowledge is available? Typically, very long: Autonomous reinforcement learning (RL) approaches typically require many interactions with the system to learn controllers, which is a practical limitation in real systems, such as robots, where many interactions can be impractical and time consuming. To address this problem, current learning approaches typically require task-specific knowledge in form of expert demonstrations, realistic simulators, pre-shaped policies, or specific knowledge about the underlying dynamics. 
              </p>`
 },
     'article-two':{
